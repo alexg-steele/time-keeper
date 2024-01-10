@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserComponent } from './user/user.component';
 import { ProjectComponent } from './project/project.component';
 import { TimeEntryComponent } from './time-entry/time-entry.component';
+import { NgFor } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TimeEntryComponent } from './time-entry/time-entry.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgFor,
   ],
   providers: [],
   bootstrap: [AppComponent]
