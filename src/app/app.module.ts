@@ -15,7 +15,7 @@ import { NgFor } from '@angular/common';
     DashboardComponent,
     UserComponent,
     ProjectComponent,
-    TimeEntryComponent
+    TimeEntryComponent,
   ],
   imports: [
     BrowserModule,
