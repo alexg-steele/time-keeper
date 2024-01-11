@@ -1,7 +1,7 @@
 <h2> Users </h2>
 <ul class="users">
-    <li *ngFor="let user of users">
-        <button type="button" [routerLink]="['/projects',user.name ]" >
+    <li *ngFor="let user of userList">
+        <button type="button" [routerLink]="['/projects',user.id ]" >
             <span class="name">{{user.name}}</span>
         </button>
   </li>

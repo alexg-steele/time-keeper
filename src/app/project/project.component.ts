@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { ProjectService } from '../project.service';
 import { Project } from '../../projects';
-import { PROJECTS } from '../../mock-projects';
 
 
 @Component({
@@ -13,6 +12,10 @@ import { PROJECTS } from '../../mock-projects';
 })
 
 export class ProjectComponent {
-  projects = PROJECTS;
+  projects: Project[] = [];
+  projectService: ProjectService = inject(ProjectService);
 
+  constructor() {
+    this.projects = this.projectService.getAllProjects();
+  }
 }

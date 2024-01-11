@@ -1,12 +1,14 @@
 <div>
     <form>
-        <div> Hours
-            <input type="number" placeholder=0>
+        <div>
+            <label for="hours"> Hours </label>
+            <input type="number" [(ngModel)]="timeEntry.hours" placeholder=0>
         </div>
     </form>
     <form>
-        <div> Task Description
-            <input type="string" placeholder="Description">
+        <div>
+            <label for="description"> Description </label>
+            <input type="string" [(ngModel)]="timeEntry.description" placeholder="Description">
         </div>
     </form>
 </div>

@@ -10,7 +10,4 @@ import { User } from '../../user';
 export class DashboardComponent {
   users: User[] = [];
 
-  // TODO: Create user service
-  // constructor(private userService: UserService) {}
-
 }

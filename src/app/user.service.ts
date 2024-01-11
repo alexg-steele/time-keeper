@@ -1,11 +1,31 @@
 import { Injectable } from '@angular/core';
 import { User } from '../user';
-import { USERS } from '../mock-users';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
+  protected userList: User[]=[
+    { id: 1, name: 'Alex' },
+    { id: 2, name: 'Bombasto' },
+    { id: 3, name: 'Celeritas' },
+    { id: 4, name: 'Magneta' },
+    { id: 5, name: 'RubberMan' },
+    { id: 6, name: 'Dynama' },
+    { id: 7, name: 'Dr. IQ' },
+    { id: 8, name: 'Magma' },
+    { id: 9, name: 'Tornado' }
+  ]
+
   constructor() { }
+
+  getAllUsers(): User[]{
+    return this.userList;
+  }
+
+  getUsersById(id: number): User | undefined{
+    return this.userList.find(user => user.id === id);
+  }
+
 }

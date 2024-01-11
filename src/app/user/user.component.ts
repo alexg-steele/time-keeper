@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { USERS } from '../../mock-users';
+import { Component, inject } from '@angular/core';
+import { User } from '../../user';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-user',
@@ -8,6 +9,11 @@ import { USERS } from '../../mock-users';
 })
 
 export class UserComponent {
-  users = USERS;
+  userList: User[] = [];
+  userService: UserService = inject(UserService);
+  
+  constructor() {
+    this.userList = this.userService.getAllUsers();
+  }
 
 }
