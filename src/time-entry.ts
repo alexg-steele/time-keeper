@@ -1,4 +1,5 @@
 export interface TimeEntry {
     id: number;
-    timeworked: number;
+    hours: number;
+    description: string;
 }
